@@ -9,6 +9,7 @@ export default async function getGeoCode(req, res) {
         process.env.API_KEY
       }`
     );
+    console.log(JSON.stringify(data));
 
     return res.send(data);
   } catch (error) {
