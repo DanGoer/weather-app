@@ -18,3 +18,27 @@ export const socialIconsList = [
     link: "https://github.com",
   },
 ];
+
+export const weatherOBMock = {
+  current: {
+    clouds: 0,
+    dew_point: 7.47,
+    dt: 1648397138,
+    feels_like: 16.88,
+    humidity: 51,
+    pressure: 1031,
+    sunrise: 1648358378,
+    sunset: 1648403771,
+    temp: 17.72,
+    uvi: 1.13,
+    visibility: 10000,
+    weather: [
+      { id: 800, main: "Clear", description: "clear sky", icon: "01d" },
+    ],
+    wind_deg: 258,
+    wind_gust: 1.79,
+    wind_speed: 0.89,
+    rain: { "1h": 0.75 },
+    snow: { "1h": 1 },
+  },
+};
