@@ -2,7 +2,7 @@ import React from "react";
 
 function CurrentCardEnd({ dt, sunset, uvi, sunrise }) {
   return (
-    <ul>
+    <ul className="flex flex-col gap-4">
       <li>
         <p>current time:{new Date(dt).toString()}</p>
       </li>
@@ -13,7 +13,7 @@ function CurrentCardEnd({ dt, sunset, uvi, sunrise }) {
         <p>sunset:{new Date(sunset).toString()}</p>
       </li>
       <li>
-        <p>uv index:{uvi}</p>
+        <p>UV index: {uvi}</p>
       </li>
     </ul>
   );

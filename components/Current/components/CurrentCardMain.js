@@ -9,24 +9,24 @@ function CurrentCardMain({
   humidity,
 }) {
   return (
-    <ul>
+    <ul className="flex flex-col gap-4">
       <li>
-        <p>clouds:{clouds}</p>
+        <p>Cloudiness: {clouds}%</p>
       </li>
       <li>
-        <p>{humidity}% humidity</p>
+        <p>Humidity: {humidity}% </p>
       </li>
       <li>
-        <p>{rain ? `rain per hour:${rain["1h"]}` : "It is not raining"}</p>
+        <p>{rain ? `Rain per hour: ${rain["1h"]}mm` : "It is not raining"}</p>
       </li>
       <li>
-        <p>{snow ? `snow per hour:${snow["1h"]}` : "It is not snowing"}</p>
+        <p>{snow ? `Snow per hour: ${snow["1h"]}mm` : "It is not snowing"}</p>
       </li>
       <li>
-        <p>wind speed:{wind_speed}</p>
+        <p>Wind speed: {wind_speed} m/s</p>
       </li>
       <li>
-        <p>visibility in m:{visibility}</p>
+        <p>Visibility in m: {visibility}m</p>
       </li>
     </ul>
   );
