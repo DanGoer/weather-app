@@ -48,9 +48,9 @@ export default function Home() {
       <header>
         <NavBar />
       </header>
-      <main className=" w-full h-screen main-bg flex flex-col justify-start items-center pt-8">
+      <main className="w-full h-screen main-bg flex flex-col justify-start items-center pt-8">
         <Current geoCodes={geoCodes} response={weatherOBMock} />
-        <Daily />
+        <Daily daily={weatherOBMock.daily} date={weatherOBMock.current.dt} />
         <Chart />
       </main>
       <footer>impressum</footer>
