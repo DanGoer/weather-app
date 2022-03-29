@@ -9,12 +9,9 @@ function CurrentCardMain({
   humidity,
 }) {
   return (
-    <ul className="flex flex-col gap-4">
+    <ul className="col-span-12 md:col-span-4 flex flex-col gap-4 py-6">
       <li>
         <p>Cloudiness: {clouds}%</p>
-      </li>
-      <li>
-        <p>Humidity: {humidity}% </p>
       </li>
       <li>
         <p>{rain ? `Rain per hour: ${rain["1h"]}mm` : "It is not raining"}</p>
@@ -28,6 +25,7 @@ function CurrentCardMain({
       <li>
         <p>Visibility in m: {visibility}m</p>
       </li>
+      <hr className="md:hidden border mt-4" />
     </ul>
   );
 }
