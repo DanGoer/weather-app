@@ -23,7 +23,6 @@ function Current({ geoCodes, response }) {
     snow,
   } = response.current;
 
-  console.log(new Date(sunrise));
   return (
     <>
       <section className="card-style grid grid-cols-12 transform-all duration-500">
@@ -31,7 +30,8 @@ function Current({ geoCodes, response }) {
           The Weather now in:
         </h2>
         <h3 className="col-span-12 md:col-span-6 flex items-center md:text-3xl justify-center">
-          Oberhausen, DE, North Rhine-Westphalia
+          {geoCodes.name}, {geoCodes.country}
+          {geoCodes.state && <>, {geoCodes.state}</>}
         </h3>
 
         <CurrentCardHead

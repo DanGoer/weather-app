@@ -8,7 +8,7 @@ function Daily({ daily, date }) {
         const dailyDate = getDate(date * 1000 + index * 86400000);
         return (
           <ul
-            className="card-style transform-all duration-500 flex flex-col gap-4 h-96"
+            className="card-style transform-all duration-500 flex flex-col gap-4 h-96 w-72"
             key={index}
           >
             <li>

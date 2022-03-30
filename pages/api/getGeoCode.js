@@ -1,11 +1,12 @@
 import axios from "axios";
 
 export default async function getGeoCode(req, res) {
-  const { city } = req.body;
+  const { location } = req.body;
+  console.log(req);
 
   try {
     const { data } = await axios(
-      `https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=${5}&appid=${
+      `https://api.openweathermap.org/geo/1.0/direct?q=${location}&limit=${5}&appid=${
         process.env.API_KEY
       }`
     );

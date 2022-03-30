@@ -32,29 +32,45 @@ export default function Home() {
   const getWeather = async (lat, lon) => {
     console.log("lat:" + lat);
     const { data } = await axios.post("/api/getWeather", { lat, lon });
-    console.log(data);
+    console.log("data" + JSON.stringify(data));
     setResponse(data);
   };
-  /*
+
   useEffect(() => {
-    getGeoCodes("Oberhausen, North Rhine-Westphalia , DE");
-  }, [location]);
+    setGeoCodes({
+      name: "Oberhausen",
+      country: "DE",
+      lat: 51.4878,
+      lon: 6.8633,
+    });
+  }, []);
 
   useEffect(() => {
     if (geoCodes.lat && geoCodes.lon) getWeather(geoCodes.lat, geoCodes.lon);
-  }, [geoCodes]); */
+  }, [geoCodes]);
 
   return (
-    <>
-      <header>
-        <NavBar />
+    <div className="bg-fixed bg-center bg-cover w-full main-bg">
+      <header className="card-style flex flex-col-reverse md:flex-row items-center justify-between gap-6 ">
+        <NavBar
+          getGeoCodes={getGeoCodes}
+          setGeoCodes={setGeoCodes}
+          setLocation={setLocation}
+          location={location}
+          locations={locations}
+          setLocations={setLocations}
+        />
       </header>
-      <main className="bg-fixed bg-center bg-cover w-full main-bg flex flex-col justify-start items-center pt-8">
-        <Current geoCodes={geoCodes} response={weatherOBMock} />
-        <Daily daily={weatherOBMock.daily} date={weatherOBMock.current.dt} />
-        <Chart />
-      </main>
+      {response.current?.dt ? (
+        <main className=" w-full  flex flex-col justify-start items-center pt-8">
+          <Current geoCodes={geoCodes} response={response} />
+          <Daily daily={response.daily} date={response.current.dt} />
+          <Chart />
+        </main>
+      ) : (
+        <></>
+      )}
       <Impressum />
-    </>
+    </div>
   );
 }
