@@ -5,6 +5,7 @@ import NavBar from "../components/NavBar";
 import axios from "axios";
 import { useEffect, useState } from "react/cjs/react.development";
 import { weatherOBMock } from "../assets/data";
+import Impressum from "../components/impressum";
 
 export default function Home() {
   const [location, setLocation] = useState("");
@@ -48,12 +49,12 @@ export default function Home() {
       <header>
         <NavBar />
       </header>
-      <main className="w-full h-screen main-bg flex flex-col justify-start items-center pt-8">
+      <main className="bg-fixed bg-center bg-cover w-full main-bg flex flex-col justify-start items-center pt-8">
         <Current geoCodes={geoCodes} response={weatherOBMock} />
         <Daily daily={weatherOBMock.daily} date={weatherOBMock.current.dt} />
         <Chart />
       </main>
-      <footer>impressum</footer>
+      <Impressum />
     </>
   );
 }
