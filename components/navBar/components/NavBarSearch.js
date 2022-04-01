@@ -45,7 +45,7 @@ function NavBarSearch({
       autoComplete="off"
       onSubmit={handleSubmit}
     >
-      <div className="flex flex-col relative">
+      <div className="flex flex-col relative z-40">
         <input
           className="sm:w-80 outline-blue-700 outline-4 focus:outline focus:bg-slate-100 focus:text-slate-700"
           placeholder="Search for a location"

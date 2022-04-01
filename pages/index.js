@@ -51,7 +51,7 @@ export default function Home() {
 
   return (
     <div className="bg-fixed bg-center bg-cover w-full main-bg">
-      <header className="card-style flex flex-col-reverse md:flex-row items-center justify-between gap-6 ">
+      <header className="card-style flex flex-col-reverse md:flex-row items-center justify-between gap-6 relative z-50">
         <NavBar
           getGeoCodes={getGeoCodes}
           setGeoCodes={setGeoCodes}
@@ -62,10 +62,10 @@ export default function Home() {
         />
       </header>
       {response.current?.dt ? (
-        <main className=" w-full  flex flex-col justify-start items-center pt-8">
+        <main className="w-full  flex flex-col justify-start items-center pt-8 gap-14">
           <Current geoCodes={geoCodes} response={response} />
+          <Chart data={response} />
           <Daily daily={response.daily} date={response.current.dt} />
-          <Chart />
         </main>
       ) : (
         <></>
