@@ -36,7 +36,7 @@ function NavBarSearch({
   };
 
   useEffect(() => {
-    if (location.length > 3) getGeoCodes(location);
+    if (location.length >= 3) getGeoCodes(location);
   }, [location]);
 
   return (
@@ -47,7 +47,7 @@ function NavBarSearch({
     >
       <div className="flex flex-col relative z-40">
         <input
-          className="sm:w-80 outline-blue-700 outline-4 focus:outline focus:bg-slate-100 focus:text-slate-700"
+          className="sm:w-80 p-1 outline-slate-600 outline-4 focus:outline  focus:text-slate-700"
           placeholder="Search for a location"
           type="text"
           name="location"
@@ -55,12 +55,12 @@ function NavBarSearch({
           onChange={handleChange}
         />
         {locations.length > 0 && (
-          <ul className="absolute w-full top-10 pt-2 bg-blue-800 pb-2 rounded-b-md cursor-pointer">
+          <ul className="absolute w-full top-10 py-2 bg-slate-600 rounded-b-lg cursor-pointer">
             {locations.map((loc) => (
               <li
                 key={loc.lat}
                 value={loc.name}
-                className="text-slate-50 hover:bg-blue-500 px-4 py-1 rounded-md"
+                className="text-white hover:bg-blue-900 px-4 py-2 rounded-lg"
                 id={loc.lat}
                 onClick={handleClick}
               >
@@ -71,7 +71,7 @@ function NavBarSearch({
           </ul>
         )}
       </div>
-      <button className="outline-blue-700  outline-4  focus:outline focus:bg-slate-100 focus:text-slate-700 border-2 border-blue-800 bg-blue-800 text-slate-100 font-semibold rounded-md px-4 py-2 hover:bg-slate-100 hover:border-slate-100 hover:text-blue-800 transition-all ease-in-out duration-500 group">
+      <button className="focus:bg-white focus:text-slate-700 border-2 border-slate-800 bg-slate-600 text-white font-semibold rounded-md px-4 py-2 hover:bg-white hover:border-slate-100 hover:text-slate-800 transition-all ease-in-out duration-500">
         Search
       </button>
     </form>

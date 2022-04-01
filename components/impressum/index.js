@@ -2,7 +2,7 @@ import ImpressumIcons from "./components/ImpressumIcons";
 
 function Impressum() {
   return (
-    <footer className="flex flex-col items-center gap-8 py-8 w-full bg-cyan-900/50 text-white">
+    <footer className="card-style flex flex-col items-center gap-8 py-8 w-full bg-cyan-900/50 text-white">
       <h2>Impressum</h2>
       <h3>According to § 5 TMG</h3>
       <p className="text-lg">

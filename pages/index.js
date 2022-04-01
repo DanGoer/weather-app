@@ -4,8 +4,9 @@ import Daily from "../components/Daily";
 import NavBar from "../components/NavBar";
 import axios from "axios";
 import { useEffect, useState } from "react/cjs/react.development";
-import { weatherOBMock } from "../assets/data";
 import Impressum from "../components/impressum";
+
+// todo: tooltip activation, time, page logo
 
 export default function Home() {
   const [location, setLocation] = useState("");
@@ -50,19 +51,21 @@ export default function Home() {
   }, [geoCodes]);
 
   return (
-    <div className="bg-fixed bg-center bg-cover w-full main-bg">
-      <header className="card-style flex flex-col-reverse md:flex-row items-center justify-between gap-6 relative z-50">
-        <NavBar
-          getGeoCodes={getGeoCodes}
-          setGeoCodes={setGeoCodes}
-          setLocation={setLocation}
-          location={location}
-          locations={locations}
-          setLocations={setLocations}
-        />
+    <div className="flex flex-col bg-fixed bg-center bg-cover w-full main-bg gap-24">
+      <header>
+        <nav className="card-style flex flex-col-reverse md:flex-row items-center justify-between gap-6 relative z-50">
+          <NavBar
+            getGeoCodes={getGeoCodes}
+            setGeoCodes={setGeoCodes}
+            setLocation={setLocation}
+            location={location}
+            locations={locations}
+            setLocations={setLocations}
+          />
+        </nav>
       </header>
       {response.current?.dt ? (
-        <main className="w-full  flex flex-col justify-start items-center pt-8 gap-14">
+        <main className="w-full  flex flex-col justify-start items-center gap-24">
           <Current geoCodes={geoCodes} response={response} />
           <Chart data={response} />
           <Daily daily={response.daily} date={response.current.dt} />

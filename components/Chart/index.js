@@ -47,15 +47,17 @@ function Chart({ data }) {
       // Graph Label
       svg
         .append("text")
+        .style("font", "30px times")
         .attr("class", "label-title")
         .attr("x", width / 2)
         .attr("y", -margin.top / 8)
         .attr("text-anchor", "middle")
-        .text("Temperature for the next 48 hours");
+        .text("Temp. for the next 48 hours");
 
       //  X axis label
       svg
         .append("text")
+        .style("font", "22px times")
         .attr("class", "label")
         .attr("x", width)
         .attr("y", height + margin.bottom)
@@ -65,10 +67,11 @@ function Chart({ data }) {
       //  Y axis label
       svg
         .append("text")
+        .style("font", "22px times")
         .attr("class", "label")
         .attr("x", 0 - margin.left)
         .attr("y", 0 - margin.top / 2)
-        .text("Temperature in °C");
+        .text("Temp. in °C");
 
       // Create Line
       const line = svg
@@ -92,7 +95,7 @@ function Chart({ data }) {
         .append("circle")
         .attr("cx", (d) => x(d.dt * 1000))
         .attr("cy", (d) => y(d.temp))
-        .attr("r", 6)
+        .attr("r", 4)
         .attr("class", "dot");
 
       // Tooltip data on mouseover
