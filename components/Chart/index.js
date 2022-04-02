@@ -19,7 +19,7 @@ function Chart({ data }) {
         chart.parentNode.getBoundingClientRect().width -
         margin.left -
         margin.right;
-      const height = 400 - margin.top - margin.bottom;
+      const height = 620 - margin.top - margin.bottom;
 
       const viewBoxWidth = width + margin.left + margin.right;
       const viewBoxHeight = height + margin.top + margin.bottom;
@@ -107,9 +107,16 @@ function Chart({ data }) {
           .attr("class", "tooltip")
           .style("opacity", 1)
           .html(
-            `Temperature: ${d.temp}°C<br/>${new Date(
-              d.dt * 1000
-            ).toLocaleDateString("default", {
+            `<img
+              src=${`http://openweathermap.org/img/wn/${d.weather[0].icon}.png`}
+              alt=${d.weather[0].description}
+              width="40"
+              height="40"
+             /> ${d.weather[0].main}, <br/> Temperature: ${
+              d.temp
+            }°C<br/>Feels like: ${d.feels_like}°C<br/>Humidity: ${
+              d.humidity
+            }%<br/> ${new Date(d.dt * 1000).toLocaleDateString("default", {
               day: "numeric",
               month: "short",
             })}, ${new Date(d.dt * 1000).toLocaleTimeString("default", {
@@ -122,8 +129,12 @@ function Chart({ data }) {
       //Tooltip trigger
       function onMouseMove(event, d) {
         const [x, y] = d3.pointer(event);
+        const isTooLow = y > height * 1;
+        const isTooRight = x > width * 1;
 
-        d3.select(".tooltip").style("bottom", `${x}px`);
+        d3.select(".tooltip")
+          .style("left", `${x + 40}px`)
+          .style("top", `${y + 40}px`);
       }
 
       //Tooltip remove
@@ -142,7 +153,7 @@ function Chart({ data }) {
   });
 
   return (
-    <div className="card-style w-full" id="d3-chart">
+    <div className="card-style w-full relative" id="d3-chart">
       <svg ref={d3Chart} />
     </div>
   );
