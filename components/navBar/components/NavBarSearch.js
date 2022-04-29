@@ -1,4 +1,4 @@
-import { useEffect } from "react/cjs/react.development";
+import { useEffect } from "react";
 
 function NavBarSearch({
   getGeoCodes,
@@ -47,7 +47,7 @@ function NavBarSearch({
     >
       <div className="flex flex-col relative z-40">
         <input
-          className="sm:w-80 p-1 outline-slate-600 outline-4 focus:outline  focus:text-slate-700"
+          className="sm:w-80 pl-4 py-2 outline-slate-600 outline-4 focus:outline rounded focus:text-slate-700"
           placeholder="Search for a location"
           type="text"
           name="location"

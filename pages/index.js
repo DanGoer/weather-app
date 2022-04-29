@@ -1,12 +1,12 @@
-import Chart from "../components/Chart";
-import Current from "../components/Current";
-import Daily from "../components/Daily";
-import NavBar from "../components/NavBar";
+import Chart from "../components/chart/Chart";
+import Current from "../components/current/Current";
+import Daily from "../components/daily/Daily";
+import NavBar from "../components/navbar/NavBar";
 import axios from "axios";
-import { useEffect, useState } from "react/cjs/react.development";
-import Impressum from "../components/impressum";
+import { useEffect, useState } from "react";
+import Impressum from "../components/impressum/Impressum";
 
-// todo: tooltip activation, time, page logo
+// todo: time, page logo
 
 export default function Home() {
   const [location, setLocation] = useState("");
@@ -15,7 +15,6 @@ export default function Home() {
   const [response, setResponse] = useState({});
 
   const getGeoCodes = async (location) => {
-    console.log("location:" + location);
     const { data } = await axios.post("/api/getGeoCode", { location });
     if (data.length > 1) {
       setLocations(data);
@@ -31,9 +30,7 @@ export default function Home() {
   };
 
   const getWeather = async (lat, lon) => {
-    console.log("lat:" + lat);
     const { data } = await axios.post("/api/getWeather", { lat, lon });
-    console.log("data" + JSON.stringify(data));
     setResponse(data);
   };
 
@@ -64,14 +61,12 @@ export default function Home() {
           />
         </nav>
       </header>
-      {response.current?.dt ? (
-        <main className="w-full  flex flex-col justify-start items-center gap-24">
+      {response?.current?.dt && (
+        <main className="w-full flex flex-col justify-start items-center gap-24">
           <Current geoCodes={geoCodes} response={response} />
           <Chart data={response} />
           <Daily daily={response.daily} date={response.current.dt} />
         </main>
-      ) : (
-        <></>
       )}
       <Impressum />
     </div>

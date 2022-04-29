@@ -1,4 +1,3 @@
-import Image from "next/image";
 import React from "react";
 import CurrentCardEnd from "./components/CurrentCardEnd";
 import CurrentCardHead from "./components/CurrentCardHead";
