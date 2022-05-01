@@ -1,38 +1,7 @@
-import Image from "next/image";
-// eye, eyes, gut1, lessborder 2?, nothing,xyz
-function NavBarLogo() {
-  return (
-    <>
-      {/*
-        <Image
-          className="hover:fill-white"
-          src="/eyereworked.svg"
-          alt=""
-          width="150"
-          height="80"
-        />*/}
-      <svg
-        version="1.1"
-        id="Layer_1"
-        xmlns="http://www.w3.org/2000/svg"
-        xmlnsXlink="http://www.w3.org/1999/xlink"
-        x="0px"
-        y="0px"
-        width="218px"
-        height="111px"
-        viewBox="0 0 218 111"
-        enableBackground="new 0 0 218 111"
-        xmlSpace="preserve"
-        className="hover:fill-white"
-      >
-        <image
-          className="hover:fill-white"
-          id="image0"
-          width={218}
-          height={111}
-          x={0}
-          y={0}
-          href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANoAAABvCAYAAACKGt4dAAAABGdBTUEAALGPC/xhBQAAACBjSFJN
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="218px" height="111px" viewBox="0 0 218 111" enable-background="new 0 0 218 111" xml:space="preserve">  <image id="image0" width="218" height="111" x="0" y="0"
+    href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANoAAABvCAYAAACKGt4dAAAABGdBTUEAALGPC/xhBQAAACBjSFJN
 AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAABmJLR0QA/wD/AP+gvaeTAAAA
 CXBIWXMAAA7DAAAOwwHHb6hkAAAb/ElEQVR42u2de3hc9X3m3/ecmZEtX7Dj+K4Z2WZsz8gXLgq2
 NRKYNqFlQ6GwrGk2WULbZaEbshByWbvZbEJKN4HswxYopIU2my3QhxbaXArp0nBJFKSxceoNF1sj
@@ -162,11 +131,5 @@ Akgpkf2UXhX5msBXTTv5al/PK3tLUt7GjZ6Gd61W0m6lcCHAi9IbDCX72wo4QqEHRBdg/wqWuSM5
 AZxGwpJ0EuAQqGMQjwB6n+D7Ag4C2GcICdtEnLaxO9798oFKts/FxcXFxcXFxcXFxcXFxcXFxcXF
 xeX/A+lDf+AKqfd7AAAAIXRFWHRDcmVhdGlvbiBUaW1lADIwMjI6MDU6MDEgMTM6MDU6MTIt222X
 AAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDIyLTA1LTAxVDE0OjE1OjU1KzAzOjAwwFKiEAAAACV0RVh0
-ZGF0ZTptb2RpZnkAMjAyMi0wNS0wMVQxNDoxNTo1NSswMzowMLEPGqwAAAAASUVORK5CYII="
-        />
-      </svg>
-    </>
-  );
-}
-
-export default NavBarLogo;
+ZGF0ZTptb2RpZnkAMjAyMi0wNS0wMVQxNDoxNTo1NSswMzowMLEPGqwAAAAASUVORK5CYII=" />
+</svg>

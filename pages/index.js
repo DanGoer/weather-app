@@ -6,7 +6,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import Impressum from "../components/impressum/Impressum";
 
-// todo: time, page logo
+// todo: time, page logo, fix py for navbar, fix bg for mozilla
 
 export default function Home() {
   const [location, setLocation] = useState("");
