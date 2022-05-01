@@ -36,8 +36,8 @@ function CurrentCardHead({ feels_like, temp, weather, humidity, uvi }) {
           <b>UV index: </b>
           {uvi}
         </p>
+        <hr className="md:hidden border border-slate-400 mt-4" />
       </li>
-      <hr className="md:hidden border border-slate-400 mt-4" />
     </ul>
   );
 }

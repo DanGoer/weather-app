@@ -1,13 +1,6 @@
 import React from "react";
 
-function CurrentCardMain({
-  clouds,
-  rain,
-  snow,
-  visibility,
-  wind_speed,
-  humidity,
-}) {
+function CurrentCardMain({ clouds, rain, snow, visibility, wind_speed }) {
   return (
     <ul className="col-span-12 md:col-span-4 flex flex-col gap-4 py-2 md:border-x-2 border-slate-400 px-2 justify-center md:items-center ">
       <li>
@@ -51,8 +44,8 @@ function CurrentCardMain({
           <b>Visibility in m: </b>
           {visibility}m
         </p>
+        <hr className="md:hidden border border-slate-400 mt-4" />
       </li>
-      <hr className="md:hidden border border-slate-400 mt-4" />
     </ul>
   );
 }

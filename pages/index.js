@@ -63,13 +63,17 @@ export default function Home() {
           />
         </nav>
       </header>
-      {response?.current?.dt && (
-        <main className="w-full flex flex-col justify-start items-center gap-24">
-          <Current geoCodes={geoCodes} response={response} />
-          <Chart data={response} />
-          <Daily daily={response.daily} date={response.current.dt} />
-        </main>
-      )}
+
+      <main className="w-full flex flex-col justify-start items-center gap-24">
+        <Current geoCodes={geoCodes} response={response} />
+        {response?.current?.dt && (
+          <>
+            <Chart data={response} />
+            <Daily daily={response.daily} date={response.current.dt} />
+          </>
+        )}
+      </main>
+
       <Impressum />
     </div>
   );
