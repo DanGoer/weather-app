@@ -7,6 +7,8 @@ import { useEffect, useState } from "react";
 import Impressum from "../components/impressum/Impressum";
 
 // todo: time, page logo, fix py for navbar, fix bg for mozilla
+// todo: time, page logo fix py for navbar, fix bg for mozilla, change images
+// and give them width and height, rework the ul( only li elements)
 
 export default function Home() {
   const [location, setLocation] = useState("");

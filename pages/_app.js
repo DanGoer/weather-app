@@ -5,7 +5,6 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <html lang="en" />
         <title>Weather APP from D.G.</title>
         <meta
           name="description"
@@ -13,6 +12,7 @@ function MyApp({ Component, pageProps }) {
         />
         <link rel="icon" href="/D.svg" />
       </Head>
+
       <Component {...pageProps} />
     </>
   );
