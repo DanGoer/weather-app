@@ -6,7 +6,8 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import Impressum from "../components/impressum/Impressum";
 
-// todo: time, page logo
+// todo: time, page logo, png not as image for best practices and give height + width to them, only li elements in ul
+// fix py for navbar and fix bg for mozilla
 
 export default function Home() {
   const [location, setLocation] = useState("");

@@ -5,6 +5,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
+        <html lang="en" />
         <title>Weather APP from D.G.</title>
         <meta
           name="description"
