@@ -5,6 +5,7 @@ import NavBar from "../components/navbar/NavBar";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import Impressum from "../components/impressum/Impressum";
+import PlaceHolder from "../components/PlaceHolder/PlaceHolder";
 
 // todo: time, page logo, fix py for navbar, fix bg for mozilla
 // todo: time, page logo fix py for navbar, fix bg for mozilla, change images
@@ -63,11 +64,15 @@ export default function Home() {
           />
         </nav>
       </header>
-      {response?.current?.dt && (
+      {response?.current?.dt ? (
         <main className="w-full flex flex-col justify-start items-center gap-24">
           <Current geoCodes={geoCodes} response={response} />
           <Chart data={response} />
           <Daily daily={response.daily} date={response.current.dt} />
+        </main>
+      ) : (
+        <main className="w-full flex flex-col justify-start items-center gap-24">
+          <PlaceHolder />
         </main>
       )}
       <Impressum />

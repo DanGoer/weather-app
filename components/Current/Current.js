@@ -2,7 +2,6 @@ import React from "react";
 import CurrentCardEnd from "./components/CurrentCardEnd";
 import CurrentCardHead from "./components/CurrentCardHead";
 import CurrentCardMain from "./components/CurrentCardMain";
-import CurrentPlaceHolder from "./components/CurrentPlaceHolder";
 
 //day js?!
 
@@ -32,27 +31,23 @@ function Current({ geoCodes, response }) {
         {geoCodes.name}, {geoCodes.country}
         {geoCodes.state && <>, {geoCodes.state}</>}
       </h3>
-      {response.current ? (
-        <>
-          <CurrentCardHead
-            feels_like={feels_like}
-            temp={temp}
-            weather={weather}
-            humidity={humidity}
-            uvi={uvi}
-          />
-          <CurrentCardMain
-            clouds={clouds}
-            rain={rain}
-            snow={snow}
-            visibility={visibility}
-            wind_speed={wind_speed}
-          />
-          <CurrentCardEnd dt={dt} sunset={sunset} sunrise={sunrise} />
-        </>
-      ) : (
-        <CurrentPlaceHolder />
-      )}
+      <>
+        <CurrentCardHead
+          feels_like={feels_like}
+          temp={temp}
+          weather={weather}
+          humidity={humidity}
+          uvi={uvi}
+        />
+        <CurrentCardMain
+          clouds={clouds}
+          rain={rain}
+          snow={snow}
+          visibility={visibility}
+          wind_speed={wind_speed}
+        />
+        <CurrentCardEnd dt={dt} sunset={sunset} sunrise={sunrise} />
+      </>
     </section>
   );
 }

@@ -1,6 +1,7 @@
-function CurrentPlaceHolder() {
+function PlaceHolderCard({ loadingLine }) {
   return (
-    <section className="col-span-12 flex flex-col gap-4 py-2 px-2 items-center">
+    <section className="card-style flex flex-col items-center transform-all duration-500 relative gap-4 w-full">
+      <h2 className=" md:text-5xl pb-8 mt-4">{loadingLine}</h2>
       <h3>
         Data is fetching!
         <br />
@@ -15,5 +16,4 @@ function CurrentPlaceHolder() {
     </section>
   );
 }
-
-export default CurrentPlaceHolder;
+export default PlaceHolderCard;
