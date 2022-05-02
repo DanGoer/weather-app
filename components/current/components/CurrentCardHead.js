@@ -1,5 +1,4 @@
 import Image from "next/image";
-import React from "react";
 
 function CurrentCardHead({ feels_like, temp, weather, humidity, uvi }) {
   return (
