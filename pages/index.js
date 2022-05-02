@@ -9,7 +9,7 @@ import PlaceHolder from "../components/PlaceHolder/PlaceHolder";
 
 // todo: time, page logo, fix py for navbar, fix bg for mozilla
 // todo: time, page logo fix py for navbar, fix bg for mozilla, change images
-// and give them width and height, rework the ul( only li elements)
+// and give them width and height
 
 export default function Home() {
   const [location, setLocation] = useState("");

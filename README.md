@@ -1,34 +1,77 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Weather-APP
 
-## Getting Started
+> A Next.js weather app using d3 and Tailwind. It displays various data concerning the actual and upcoming weather.
 
-First, run the development server:
+Live demo: https://weather-app-alpha-snowy.vercel.app/
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## Table of Contents
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- [General Info](#general-information)
+- [Technologies Used](#technologies-used)
+- [Features](#features)
+- [Setup](#setup)
+- [Usage](#usage)
+- [Project Status](#project-status)
+- [Room for Improvement](#room-for-improvement)
+- [Contact](#contact)
+- [License](#license)
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## General Information
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+This project was created with the purpose of learning Next.js, d3 and Tailwind.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+The intention was to create an app which uses and displays various data from an external API.
 
-## Learn More
+## Technologies Used
 
-To learn more about Next.js, take a look at the following resources:
+- React - version 17.0.2
+- Next.js - version 12.1.0
+- Tailwind - version 3.0.23
+- d3 - version 7.4.0
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Features
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- Styled page for weather data display
+- Search function for cities
+- Extensive informations for the current day
+- Hourly temperature as a chart for the next 48 hours, which provides additional informations for every single hour as a tooltip
+- A preview for the next 8 days
 
-## Deploy on Vercel
+## Setup
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+For running it on your local environment first:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+`npm install or yarn install`
+
+You have to setup an .env with API_KEY=yourapikeyhere
+You can get an API key for free at: https://openweathermap.org/api
+
+To run development server:
+
+`npm run dev or yarn run dev`
+
+Open http://localhost:3000 with your browser to see the result.
+For a full list of dependencies take a look at package.json.
+
+## Usage
+
+This app has a default city. Also you can search for another location at the navbar.
+
+## Project Status
+
+Project is: _incomplete_
+
+This is the nearly finished and working version of my Weather-APP.
+
+## Room for Improvement
+
+- Adding functionality for getting the visitors location
+- Improving browser compatibility
+
+## Contact
+
+Created by [@DanGoer](https://www.github.com/DanGoer/) - feel free to contact me!
+
+## License
+
+Feel free to use this code for your own projects!
