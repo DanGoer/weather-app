@@ -14,7 +14,7 @@ function Daily({ daily, date }) {
             key={index}
           >
             <li>
-              <h2 className="">{dailyDate}</h2>
+              <h2>{dailyDate}</h2>
             </li>
             <li className="flex flex-row items-center justify-center mr-4">
               <Image
