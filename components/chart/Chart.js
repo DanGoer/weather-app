@@ -1,3 +1,5 @@
+// d3 chart for the next 2 days
+
 import { useEffect, useRef } from "react";
 import * as d3 from "d3";
 

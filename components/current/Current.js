@@ -1,9 +1,8 @@
-import React from "react";
+// Current weather
+
 import CurrentCardEnd from "./components/CurrentCardEnd";
 import CurrentCardHead from "./components/CurrentCardHead";
 import CurrentCardMain from "./components/CurrentCardMain";
-
-//day js?!
 
 function Current({ geoCodes, response }) {
   const {

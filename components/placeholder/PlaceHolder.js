@@ -1,3 +1,5 @@
+// PlaceHolder
+
 import PlaceHolderCard from "./components/PlaceHolderCard";
 
 function PlaceHolder() {

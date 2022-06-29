@@ -1,3 +1,5 @@
+// Current weather for Current
+
 import Image from "next/image";
 
 function CurrentCardHead({ feels_like, temp, weather, humidity, uvi }) {

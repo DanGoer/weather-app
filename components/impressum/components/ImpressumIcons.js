@@ -1,5 +1,6 @@
+// Socialicon component for Impressum
+
 import Link from "next/link";
-import React from "react";
 import { socialIconsList } from "../../../assets/data";
 
 function ImpressumIcons() {

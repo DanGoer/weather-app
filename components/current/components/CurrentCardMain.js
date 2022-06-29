@@ -1,4 +1,4 @@
-import React from "react";
+// Current weather for Current
 
 function CurrentCardMain({ clouds, rain, snow, visibility, wind_speed }) {
   return (

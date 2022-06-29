@@ -1,3 +1,5 @@
+// PlaceHolderCard
+
 function PlaceHolderCard({ loadingLine }) {
   return (
     <section className="card-style flex flex-col items-center transform-all duration-500 relative gap-4 w-full">

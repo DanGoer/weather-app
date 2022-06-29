@@ -1,3 +1,5 @@
+// Daily weather
+
 import { getDate } from "../../utility/time";
 import Image from "next/image";
 

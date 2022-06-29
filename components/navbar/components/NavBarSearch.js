@@ -1,3 +1,5 @@
+// NavBarSearch
+
 import { useEffect } from "react";
 
 function NavBarSearch({

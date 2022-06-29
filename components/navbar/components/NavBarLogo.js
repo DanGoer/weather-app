@@ -1,3 +1,5 @@
+// NavBarLogo
+
 import Image from "next/image";
 // eye, eyes, gut1, lessborder 2?, nothing,xyz
 function NavBarLogo() {
