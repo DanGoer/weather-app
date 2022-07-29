@@ -1,3 +1,5 @@
+// getGeoCode api call from openweather
+
 import axios from "axios";
 
 export default async function getGeoCode(req, res) {

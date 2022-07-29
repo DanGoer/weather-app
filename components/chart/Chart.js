@@ -97,7 +97,7 @@ function Chart({ data }) {
         .append("circle")
         .attr("cx", (d) => x(d.dt * 1000))
         .attr("cy", (d) => y(d.temp))
-        .attr("r", 4)
+        .attr("r", 5)
         .attr("class", "dot");
 
       // Tooltip data on mouseover

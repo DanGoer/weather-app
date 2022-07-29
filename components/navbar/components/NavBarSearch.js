@@ -39,7 +39,7 @@ function NavBarSearch({
 
   useEffect(() => {
     if (location.length >= 3) getGeoCodes(location);
-  }, [location]);
+  }, [location, getGeoCodes]);
 
   return (
     <form

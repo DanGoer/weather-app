@@ -1,3 +1,5 @@
+// getWeather api call from openweather
+
 import axios from "axios";
 
 export default async function getWeather(req, res) {

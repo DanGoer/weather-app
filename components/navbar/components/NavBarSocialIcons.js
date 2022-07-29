@@ -11,11 +11,14 @@ function NavBarSocialIcons() {
           return (
             <Link key={icon.name} href={icon.link} passHref>
               <svg
-                className="w-10 h-10 hover:cursor-pointer"
+                className="w-10 h-10 group hover:cursor-pointer"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox={icon.viewBox}
               >
-                <g className="hover:fill-white" fill="#1e293b">
+                <g
+                  className="group-hover:fill-white  transition-all duration-300"
+                  fill="#1e293b"
+                >
                   <path d={icon.svg} />
                 </g>
               </svg>

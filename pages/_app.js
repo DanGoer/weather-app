@@ -1,3 +1,5 @@
+// root component and head informations for seo
+
 import "../styles/globals.css";
 import Head from "next/head";
 

@@ -18,3 +18,15 @@ export const socialIconsList = [
     link: "https://github.com",
   },
 ];
+
+export const impressumData = {
+  address: {
+    name: "D.Goergens",
+    street: "Dorstener Strasse 534",
+    city: "46119 Oberhausen",
+  },
+  contact: {
+    tel: "+49 (0) 177 1234567",
+    email: "E-Mail: d.goergens@gmail.com",
+  },
+};

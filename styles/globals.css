@@ -3,6 +3,8 @@
 @tailwind base;
 
 @layer base {
+  /* basic css settings */
+
   body {
     @apply text-white p-0 m-0;
   }
@@ -26,11 +28,15 @@
   * {
     box-sizing: border-box;
   }
+
+  /* basic css settings end*/
 }
 
 @tailwind components;
 
 @layer components {
+  /* setups for card and main */
+
   .main-bg {
     background-image: url("/bg.jpeg");
     background-size: cover;
@@ -45,6 +51,10 @@
       @apply bg-slate-50 bg-opacity-40 backdrop-filter backdrop-blur-md text-slate-700 py-8 px-4 rounded-md shadow-lg;
     }
   }
+
+  /* setups for card and main end*/
+
+  /* style classes for d3 chart */
 
   .tooltip {
     @apply bg-zinc-300 text-slate-700 p-4 rounded-md shadow-lg;
@@ -62,9 +72,15 @@
     @apply text-lg;
   }
 
+  .line {
+    @apply stroke-slate-600 fill-transparent stroke-[0.25rem];
+  }
+
   .label-title {
     @apply text-lg;
   }
+
+  /* style classes for d3 chart end*/
 
   /* CSS for loading spinner */
 
@@ -131,4 +147,6 @@
       transform: translate(24px, 0);
     }
   }
+
+  /* CSS for loading spinner end */
 }

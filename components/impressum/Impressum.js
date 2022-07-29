@@ -1,5 +1,6 @@
 // Impressum
 
+import { impressumData } from "../../assets/data";
 import ImpressumIcons from "./components/ImpressumIcons";
 
 function Impressum() {
@@ -8,17 +9,17 @@ function Impressum() {
       <h2>Impressum</h2>
       <h3>According to § 5 TMG</h3>
       <p className="text-lg">
-        D. Goergens
+        {impressumData.address.name}
         <br />
-        Dorstener Strasse 534
+        {impressumData.address.street}
         <br />
-        46119 Oberhausen
+        {impressumData.address.city}
       </p>
       <h3>Contact</h3>
       <p className="text-lg">
-        Tel. Nr.: +49 (0) 177 1234567
+        Tel. Nr.: {impressumData.contact.tel}
         <br />
-        E-Mail: d.goergens@gmail.com
+        E-Mail: {impressumData.contact.email}
       </p>
       <ImpressumIcons />
     </footer>
