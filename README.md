@@ -24,8 +24,8 @@ The intention was to create an app which uses and displays various data from an 
 
 ## Technologies Used
 
-- React - version 17.0.2
-- Next.js - version 12.1.0
+- React - version 18.2.0
+- Next.js - version 12.2.4
 - Tailwind - version 3.0.23
 - d3 - version 7.4.0
 
@@ -70,7 +70,7 @@ This is the nearly finished and working version of my Weather-APP.
 
 ## Contact
 
-Created by [@DanGoer](https://www.github.com/DanGoer/) - feel free to contact me!
+Created by [@DaGo85](https://www.github.com/DanGoer/) - feel free to contact me!
 
 ## License
 

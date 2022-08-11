@@ -5,14 +5,13 @@ import Image from "next/image";
 function NavBarLogo() {
   return (
     <>
-      {/*
-        <Image
-          className="hover:fill-white"
-          src="/eyereworked.svg"
-          alt=""
-          width="150"
-          height="80"
-        />*/}
+      {/*<Image
+        className="hover:fill-white"
+        src="/lessborder.svg"
+        alt=""
+        width="300"
+        height="160"
+  />*/}
       <svg
         version="1.1"
         id="Layer_1"
