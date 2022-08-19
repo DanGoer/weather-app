@@ -22,11 +22,11 @@ function Current({ geoCodes, response }) {
   } = response.current;
 
   return (
-    <section className="card-style grid grid-cols-12 transform-all duration-500 relative">
-      <h2 className="col-span-12 md:col-span-4 md:text-5xl pb-8">
-        The Weather now in:
+    <section className="relative grid grid-cols-12 duration-500 card-style transform-all">
+      <h2 className="col-span-12 pb-8 md:col-span-4 md:text-5xl">
+        Current weather in:
       </h2>
-      <h3 className="col-span-12 md:col-span-6 pb-8 flex items-center md:text-3xl justify-center">
+      <h3 className="flex items-center justify-center col-span-12 pb-8 md:col-span-6 md:text-5xl">
         {geoCodes.name}, {geoCodes.country}
         {geoCodes.state && <>, {geoCodes.state}</>}
       </h3>

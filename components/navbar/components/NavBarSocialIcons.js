@@ -16,7 +16,7 @@ function NavBarSocialIcons() {
                 viewBox={icon.viewBox}
               >
                 <g
-                  className="group-hover:fill-white  transition-all duration-300"
+                  className="transition-all duration-300 group-hover:fill-white"
                   fill="#1e293b"
                 >
                   <path d={icon.svg} />

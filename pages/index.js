@@ -6,11 +6,9 @@ import NavBar from "../components/navbar/NavBar";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import Impressum from "../components/impressum/Impressum";
-import PlaceHolder from "../components/placeHolder/PlaceHolder";
+import PlaceHolder from "../components/placeholders/PlaceHolder";
 
-// todo: time, page logo, fix py for navbar, fix bg for mozilla
-// todo: time, page logo fix py for navbar, fix bg for mozilla, change images
-// and give them width and height
+// todo: fix py for navbar , fix input field bug, rework some css
 
 export default function Home() {
   const [location, setLocation] = useState("");
@@ -40,10 +38,10 @@ export default function Home() {
 
   useEffect(() => {
     setGeoCodes({
-      name: "Oberhausen",
-      country: "DE",
-      lat: 51.4878,
-      lon: 6.8633,
+      name: "Bern",
+      country: "CH",
+      lat: 46.57,
+      lon: 7.27,
     });
   }, []);
 
@@ -52,9 +50,9 @@ export default function Home() {
   }, [geoCodes]);
 
   return (
-    <div className="flex flex-col bg-fixed bg-center bg-cover w-full main-bg gap-24">
+    <div className="flex flex-col w-full gap-24 bg-fixed bg-center bg-cover main-bg">
       <header>
-        <nav className="card-style flex flex-col-reverse md:flex-row items-center justify-between gap-6 relative z-50">
+        <nav className="relative z-50 flex flex-col-reverse items-center justify-between gap-6 card-style md:flex-row">
           <NavBar
             getGeoCodes={getGeoCodes}
             setGeoCodes={setGeoCodes}
@@ -66,13 +64,13 @@ export default function Home() {
         </nav>
       </header>
       {response?.current?.dt ? (
-        <main className="w-full flex flex-col justify-start items-center gap-24">
+        <main className="flex flex-col items-center justify-start w-full gap-24">
           <Current geoCodes={geoCodes} response={response} />
           <Chart data={response} />
           <Daily daily={response.daily} date={response.current.dt} />
         </main>
       ) : (
-        <main className="w-full flex flex-col justify-start items-center gap-24">
+        <main className="flex flex-col items-center justify-start w-full gap-24">
           <PlaceHolder />
         </main>
       )}

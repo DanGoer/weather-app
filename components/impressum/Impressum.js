@@ -5,22 +5,20 @@ import ImpressumIcons from "./components/ImpressumIcons";
 
 function Impressum() {
   return (
-    <footer className="card-style flex flex-col items-center gap-8 py-8 w-full bg-cyan-900/50 text-white">
+    <footer className="flex flex-col items-center w-full gap-8 py-8 text-white card-style bg-cyan-900/50">
       <h2>Impressum</h2>
       <h3>According to § 5 TMG</h3>
-      <p className="text-lg">
+      <address className="text-lg text-center">
         {impressumData.address.name}
         <br />
         {impressumData.address.street}
         <br />
         {impressumData.address.city}
-      </p>
+      </address>
       <h3>Contact</h3>
-      <p className="text-lg">
-        Tel. Nr.: {impressumData.contact.tel}
-        <br />
+      <address className="text-lg">
         E-Mail: {impressumData.contact.email}
-      </p>
+      </address>
       <ImpressumIcons />
     </footer>
   );
