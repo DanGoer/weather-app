@@ -50,7 +50,8 @@ export default function Home() {
   }, [geoCodes]);
 
   return (
-    <div className="flex flex-col w-full gap-24 bg-fixed bg-center bg-cover main-bg">
+    <div className="flex flex-col">
+      <div className="fixed w-screen h-screen bg-center bg-cover bg-main" />
       <header>
         <nav className="relative z-50 flex flex-col-reverse items-center justify-between gap-6 card-style md:flex-row">
           <NavBar
@@ -64,7 +65,7 @@ export default function Home() {
         </nav>
       </header>
       {response?.current?.dt ? (
-        <main className="flex flex-col items-center justify-start w-full gap-24">
+        <main className="flex flex-col items-center justify-start w-full gap-24 py-24">
           <Current geoCodes={geoCodes} response={response} />
           <Chart data={response} />
           <Daily daily={response.daily} date={response.current.dt} />

@@ -47,22 +47,22 @@ function NavBarSearch({
       autoComplete="off"
       onSubmit={handleSubmit}
     >
-      <div className="flex flex-col relative z-40">
+      <div className="relative z-40 flex flex-col">
         <input
-          className="sm:w-80 pl-4 py-2 outline-slate-600 outline-4 focus:outline rounded focus:text-slate-700"
-          placeholder="Search for a location"
+          className="py-2 pl-4 rounded sm:w-80 outline-slate-600 outline-4 focus:outline focus:text-slate-700"
+          placeholder="Search for a location..."
           type="text"
           name="location"
           value={location}
           onChange={handleChange}
         />
         {locations.length > 0 && (
-          <ul className="absolute w-full top-10 py-2 bg-slate-600 rounded-b-lg cursor-pointer">
+          <ul className="absolute w-full py-2 rounded-b-lg cursor-pointer top-10 bg-slate-600">
             {locations.map((loc) => (
               <li
                 key={loc.lat}
                 value={loc.name}
-                className="text-white hover:bg-blue-900 px-4 py-2 rounded-lg"
+                className="px-4 py-2 text-white rounded-lg hover:bg-blue-900"
                 id={loc.lat}
                 onClick={handleClick}
               >
@@ -73,7 +73,7 @@ function NavBarSearch({
           </ul>
         )}
       </div>
-      <button className="focus:bg-white focus:text-slate-700 border-2 border-slate-800 bg-slate-600 text-white font-semibold rounded-md px-4 py-2 hover:bg-white hover:border-slate-100 hover:text-slate-800 transition-all ease-in-out duration-500">
+      <button className="px-4 py-2 font-semibold text-white transition-all duration-500 ease-in-out border-2 rounded-md focus:bg-white focus:text-slate-700 border-slate-800 bg-slate-600 hover:bg-white hover:border-slate-100 hover:text-slate-800">
         Search
       </button>
     </form>
