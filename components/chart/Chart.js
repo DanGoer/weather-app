@@ -10,7 +10,6 @@ function Chart({ data }) {
     const chart = d3Chart.current;
 
     if (data.hourly) {
-      // Message data
       const dates = data.hourly.map((d) => d.dt * 1000);
       const temps = data.hourly.map((d) => d.temp);
 
@@ -34,6 +33,7 @@ function Chart({ data }) {
 
       // Create Axis
       const x = d3.scaleTime().domain(d3.extent(dates)).range([0, width]);
+
       svg
         .append("g")
         .attr("transform", `translate(0, ${height})`)
@@ -131,8 +131,21 @@ function Chart({ data }) {
       //Tooltip trigger
       function onMouseMove(event, d) {
         const [x, y] = d3.pointer(event);
-        const isTooLow = y > height * 1;
-        const isTooRight = x > width * 1;
+        const isTooLow = y > height * 0.66;
+        const isTooRight = x > width * 0.9;
+
+        if (isTooLow) {
+          d3.select(".tooltip")
+            .style("left", `${x + 40}px`)
+            .style("top", `${y - 80}px`);
+          return;
+        }
+        if (isTooRight) {
+          d3.select(".tooltip")
+            .style("left", `${x - 100}px`)
+            .style("top", `${y + 40}px`);
+          return;
+        }
 
         d3.select(".tooltip")
           .style("left", `${x + 40}px`)
@@ -155,7 +168,7 @@ function Chart({ data }) {
   });
 
   return (
-    <div className="card-style w-full relative" id="d3-chart">
+    <div className="relative z-50 w-full card-style" id="d3-chart">
       <svg ref={d3Chart} />
     </div>
   );

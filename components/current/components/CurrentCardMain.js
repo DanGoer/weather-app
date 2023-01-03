@@ -2,7 +2,7 @@
 
 function CurrentCardMain({ clouds, rain, snow, visibility, wind_speed }) {
   return (
-    <ul className="col-span-12 md:col-span-4 flex flex-col gap-4 py-2 md:border-x-2 border-slate-400 px-2 justify-center md:items-center">
+    <ul className="flex flex-col justify-center col-span-12 gap-4 px-2 py-2 md:col-span-4 md:border-x-2 border-slate-400 md:items-center">
       <li>
         <p>
           <b>Cloudiness: </b>
@@ -44,7 +44,7 @@ function CurrentCardMain({ clouds, rain, snow, visibility, wind_speed }) {
           <b>Visibility in m: </b>
           {visibility}m
         </p>
-        <hr className="md:hidden border border-slate-400 mt-4" />
+        <hr className="mt-4 border md:hidden border-slate-400" />
       </li>
     </ul>
   );

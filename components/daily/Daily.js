@@ -5,12 +5,12 @@ import Image from "next/image";
 
 function Daily({ daily, date }) {
   return (
-    <section className="flex flex-row flex-wrap gap-10 items-center justify-center">
+    <section className="flex flex-row flex-wrap items-center justify-center gap-10">
       {daily.map((day, index) => {
         const dailyDate = getDate(date * 1000 + index * 86400000);
         return (
           <ul
-            className="card-style transform-all duration-500 flex flex-col gap-4 h-96 w-72"
+            className="flex flex-col gap-4 duration-500 card-style transform-all h-96 w-72"
             key={index}
           >
             <li>
@@ -25,7 +25,7 @@ function Daily({ daily, date }) {
               />
               <p className="capitalize">{day.weather[0].description}</p>
             </li>
-            <li className="flex flex-row justify-between items-center gap-4 px-8">
+            <li className="flex flex-row items-center justify-between gap-4 px-8">
               <svg
                 width={30}
                 height={30}
@@ -36,7 +36,7 @@ function Daily({ daily, date }) {
               </svg>
               <p>{day.temp.day}°C</p>
             </li>
-            <li className="flex flex-row justify-between items-center gap-4 px-8">
+            <li className="flex flex-row items-center justify-between gap-4 px-8">
               <svg
                 width={30}
                 height={30}
@@ -47,7 +47,7 @@ function Daily({ daily, date }) {
               </svg>
               <p>{day.temp.night}°C</p>
             </li>
-            <li className="flex flex-row justify-between items-center gap-8 px-8">
+            <li className="flex flex-row items-center justify-between gap-8 px-8">
               <svg
                 width={30}
                 height={30}
@@ -85,7 +85,7 @@ function Daily({ daily, date }) {
             <li>
               <p>
                 {day.rain ? (
-                  <span className="flex flex-row justify-between items-center gap-4 px-8">
+                  <span className="flex flex-row items-center justify-between gap-4 px-8">
                     <svg
                       width={30}
                       height={30}
@@ -94,10 +94,10 @@ function Daily({ daily, date }) {
                     >
                       <path d="M416 128c-.625 0-1.125 .25-1.625 .25C415.5 123 416 117.6 416 112C416 67.75 380.3 32 336 32c-24.62 0-46.25 11.25-61 28.75C256.4 24.75 219.3 0 176 0C114.1 0 64 50.13 64 112c0 7.25 .75 14.25 2.125 21.25C27.75 145.8 0 181.5 0 224c0 53 43 96 96 96h320c53 0 96-43 96-96S469 128 416 128zM368 464c0 26.51 21.49 48 48 48s48-21.49 48-48s-48.01-95.1-48.01-95.1S368 437.5 368 464zM48 464C48 490.5 69.49 512 96 512s48-21.49 48-48s-48.01-95.1-48.01-95.1S48 437.5 48 464zM208 464c0 26.51 21.49 48 48 48s48-21.49 48-48s-48.01-95.1-48.01-95.1S208 437.5 208 464z" />
                     </svg>
-                    {day.rain}mm
+                    <p>{day.rain}mm</p>
                   </span>
                 ) : day.snow ? (
-                  <span className="flex flex-row justify-between items-center gap-4 px-8">
+                  <span className="flex flex-row items-center justify-between gap-4 px-8">
                     <svg
                       width={30}
                       height={30}

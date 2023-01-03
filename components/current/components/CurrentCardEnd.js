@@ -4,7 +4,7 @@ import React from "react";
 
 function CurrentCardEnd({ dt, sunset, sunrise }) {
   return (
-    <ul className="col-span-12 md:col-span-5 flex flex-col justify-center items-center gap-4 py-2 px-2">
+    <ul className="flex flex-col items-center justify-center col-span-12 gap-4 px-2 py-2 md:col-span-5">
       <li>
         <p>
           <b>Current time: </b>

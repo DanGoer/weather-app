@@ -4,7 +4,7 @@ import Image from "next/image";
 
 function CurrentCardHead({ feels_like, temp, weather, humidity, uvi }) {
   return (
-    <ul className="col-span-12 md:col-span-3 flex flex-col gap-4 py-2 px-2">
+    <ul className="flex flex-col col-span-12 gap-4 px-2 py-2 md:col-span-3">
       <li className="flex flex-row items-center justify-center mr-4">
         <Image
           src={`http://openweathermap.org/img/wn/${weather[0].icon}.png`}
@@ -37,7 +37,7 @@ function CurrentCardHead({ feels_like, temp, weather, humidity, uvi }) {
           <b>UV index: </b>
           {uvi}
         </p>
-        <hr className="md:hidden border border-slate-400 mt-4" />
+        <hr className="mt-4 border md:hidden border-slate-400" />
       </li>
     </ul>
   );
