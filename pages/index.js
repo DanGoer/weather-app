@@ -18,9 +18,11 @@ export default function Home() {
 
   const getGeoCodes = async (location) => {
     const { data } = await axios.post("/api/getGeoCode", { location });
+
     if (data.length > 1) {
       setLocations(data);
     }
+
     if (data.length === 1) {
       setGeoCodes({
         name: data[0].name,
@@ -71,7 +73,7 @@ export default function Home() {
           <Daily daily={response.daily} date={response.current.dt} />
         </main>
       ) : (
-        <main className="flex flex-col items-center justify-start w-full gap-24">
+        <main className="flex flex-col items-center justify-start w-full gap-24 py-24">
           <PlaceHolder />
         </main>
       )}
