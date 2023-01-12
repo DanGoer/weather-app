@@ -32,6 +32,6 @@ export const impressumData = {
     city: "46119 Oberhausen",
   },
   contact: {
-    email: "E-Mail: danielgoe1983@gmail.com",
+    email: "danielgoe1983@gmail.com",
   },
 };
