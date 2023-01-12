@@ -37,11 +37,6 @@
 @layer components {
   /* setups for card and main */
 
-  .main-bg {
-    background-image: url("/bg.jpeg");
-    background-size: cover;
-  }
-
   .card-style {
     @apply bg-slate-300 bg-opacity-80 text-slate-700 py-8 px-4 rounded-md shadow-lg;
   }
@@ -73,7 +68,7 @@
   }
 
   .line {
-    @apply stroke-slate-600 fill-transparent stroke-[0.25rem];
+    @apply stroke-slate-600 fill-transparent stroke-[0.15rem] z-10;
   }
 
   .label-title {
